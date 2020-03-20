@@ -43,6 +43,7 @@ func parse(url string) (*html.Node, error) {
 	return b, err
 }
 
+// Комментарий для отладки работы
 func pageLinks(links []string, n *html.Node) []string {
 	if n.Type == html.ElementNode && n.Data == "a" {
 		for _, a := range n.Attr {
